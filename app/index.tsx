@@ -18,6 +18,11 @@ export default function Home() {
   const onScroll = ({ nativeEvent }: NativeSyntheticEvent<NativeScrollEvent>) =>
     widgetRef.current?.onScroll(nativeEvent);
 
+  const mySubIds = {
+    someKey: 'someValue',
+    anotherKey: 'anotherValue'
+  };
+
   return (
     <ScrollView
       onScroll={onScroll}
@@ -78,6 +83,7 @@ export default function Home() {
           widgetId={66621}
           pubId={84088}
           siteUrl="https://app.revcontent.com"
+          subIds={mySubIds}
         />
         <ThemedText>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
